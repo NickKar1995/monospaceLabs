@@ -1,7 +1,7 @@
 import http from "../http-common";
 
 const getAll = () => {
-  return http.get("/posts");
+  return http.get("/users");
 };
 
 const update = (id, data) => {
