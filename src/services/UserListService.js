@@ -4,8 +4,8 @@ const getAll = () => {
   return http.get("/users");
 };
 
-const update = (id, data) => {
-  return http.put(`/tutorials/${id}`, data);
+const update = (id) => {
+  return http.put(`/users/${id}`);
 };
 
 const UserListService = {
