@@ -11,10 +11,7 @@ const RowComponent = ({ users, updatePublished, checkUser }) => {
   return (
     <>
       {users.map((user) => (
-        <tr key={user.id}>
-          {/* <td>
-            <input onClick={() => checkUser(user)} type="checkbox" />
-          </td> */}   
+        <tr key={user.id}> 
           <td>
             {user.selected ? (
               <input onChange={() => checkUser(user)} type="checkbox" checked />
@@ -37,8 +34,6 @@ const RowComponent = ({ users, updatePublished, checkUser }) => {
               }
             >{`${user.type}`}</span>
           </td>
-
-          {/* <td>{`${user.username}`}</td> */}
           <td>{user.name}</td>
           <td>{user.email}</td>
           <td>{`${user.phone}`}</td>
