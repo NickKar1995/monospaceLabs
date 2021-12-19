@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+-Fork the project on your local repo and download the files
+-Run the npm init command in order to download the node_modules required
+-Run npm start
+
 ## Available Scripts
 
 In the project directory, you can run:
