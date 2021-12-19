@@ -8,6 +8,7 @@ import { usersData } from "../mocks/users";
 export default function UsersList() {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(false);
+
   const checkUser = (user_) => {
     setUsers((prevState) => {
       const userStatusChange = prevState.map((user) => {
@@ -19,7 +20,17 @@ export default function UsersList() {
       return userStatusChange;
     });
   };
-  // let usersSelected = 2;
+  //
+  const checkAll = () => {
+    console.log("ALL USERS", users);
+    setUsers((prevState) => {
+      const userStatusChange = prevState.map((user) => {
+        return { ...user, selected: !user.selected };
+      });
+      return userStatusChange;
+    });
+  };
+  //
   const updatePublished = (user) => {
     const currentUser = { ...user };
     let data = {
@@ -27,7 +38,9 @@ export default function UsersList() {
       // type: currentUser.type,
       name: currentUser.name,
       email: currentUser.email,
-      phone: !currentUser.status,
+      phone: currentUser.phone,
+      // phone: !currentUser.status,
+      active: !currentUser.status,
     };
 
     UserListService.update(currentUser.id, data)
@@ -35,7 +48,9 @@ export default function UsersList() {
         setUsers((prevState) => {
           const userStatusChange = prevState.map((user) => {
             if (user.id === currentUser.id) {
-              return { ...user, phone: !user.phone };
+              console.log("user", user);
+              return { ...user, active: !user.active };
+              // return { ...user, phone: !user.phone };
             }
             return user;
           });
@@ -46,7 +61,7 @@ export default function UsersList() {
         console.error(error);
       });
   };
-
+  // Code for the API call (JSON Placeholder)
   const retrieveUsers = () => {
     setLoading(true);
     UserListService.getAll()
@@ -62,20 +77,16 @@ export default function UsersList() {
         console.log(e);
       });
   };
+  //
 
   useEffect(() => {
-    setUsers(usersData);
-    // retrieveUsers();
+    setUsers(usersData); //Disable this
+    // retrieveUsers();                   //Enable this
   }, []);
 
   if (loading) return <p>Loading...</p>;
   return (
-    <div
-      className="wrapper
-    
-    
-    "
-    >
+    <div className="wrapper">
       <div className="first-bar">
         <div className="left-side">
           <img src="/images/Questionmark.svg" alt="question mark" />
@@ -90,10 +101,13 @@ export default function UsersList() {
       <Table hover>
         <thead>
           <tr>
-            <th>
+            {/* <th>
               <input type="checkbox" />
+            </th> */}
+            <th>
+              <input onClick={() => checkAll()} type="checkbox" />
+              <span>Type</span>
             </th>
-            <th>Type</th>
             <th>Name</th>
             <th>Email</th>
             <th>Telephone</th>

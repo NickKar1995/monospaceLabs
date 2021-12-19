@@ -10,6 +10,10 @@ td span {
   padding: 2px;
 }
 
+td input {
+  margin-right: 18px;
+}
+
 .back-blue {
   background-color: #8a98ca;
 }
