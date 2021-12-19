@@ -70,11 +70,22 @@ export default function UsersList() {
 
   if (loading) return <p>Loading...</p>;
   return (
-    <div>
-      <h1>I Work</h1>
-      <img src="/images/Questionmark.svg" alt="question mark" />
-      <SelectedComponent users={users} />
-      <Table striped bordered hover>
+    <div class="wrapper
+    
+    
+    ">
+      <div className="first-bar">
+        <div className="left-side">
+          <img src="/images/Questionmark.svg" alt="question mark" />
+          <span>Users</span>
+        </div>
+        <div className="right-side">
+          <img src="/images/Questionmark.svg" alt="question mark" />
+          <SelectedComponent users={users} />
+        </div>
+      </div>
+      {/* TABLE */}
+      <Table hover>
         <thead>
           <tr>
             <th>
