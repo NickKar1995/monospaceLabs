@@ -22,7 +22,6 @@ export default function UsersList() {
   };
   //
   const checkAll = () => {
-    console.log("ALL USERS", users);
     setUsers((prevState) => {
       const userStatusChange = prevState.map((user) => {
         return { ...user, selected: !user.selected };
@@ -48,7 +47,6 @@ export default function UsersList() {
         setUsers((prevState) => {
           const userStatusChange = prevState.map((user) => {
             if (user.id === currentUser.id) {
-              console.log("user", user);
               return { ...user, active: !user.active };
               // return { ...user, phone: !user.phone };
             }
