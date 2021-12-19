@@ -14,7 +14,7 @@ const RowComponent = ({ users, updatePublished, checkUser }) => {
         <tr key={user.id}>
           {/* <td>
             <input onClick={() => checkUser(user)} type="checkbox" />
-          </td> */}
+          </td> */}   
           <td>
             {user.selected ? (
               <input onChange={() => checkUser(user)} type="checkbox" checked />
