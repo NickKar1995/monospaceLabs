@@ -14,7 +14,7 @@ const SelectedComponent = ({ users }) => {
 
   return (
     <>
-      <p>Selected:{selectedUserCount}</p>
+      <span>Selected:{selectedUserCount}</span>
     </>
   );
 };

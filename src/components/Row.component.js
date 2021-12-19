@@ -20,10 +20,6 @@ const RowComponent = ({ users, updatePublished, checkUser }) => {
           <td>{user.email}</td>
           <td>{`${user.phone}`}</td>
           <td>
-            {/* <Button onClick={() => updateStatusHandler(user)} variant="primary">
-              {user.phone ? "Deactivate" : "Activate"}
-            </Button> */}
-
             {user.phone ? (
               <Button
                 onClick={() => updateStatusHandler(user)}

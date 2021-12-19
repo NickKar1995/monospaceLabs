@@ -1,5 +1,7 @@
 import "./App.css";
-import  UsersList  from "./components/UserList.component";
+import "./components/css/UserList.component.css";
+import "./components/css/Row.component.css";
+import UsersList from "./components/UserList.component";
 
 function App() {
   return (

@@ -1,0 +1,40 @@
+.wrapper{
+  margin-top: 50px;
+}
+
+
+th {
+  font-family: "Montserrat-bold", sans-serif;
+  line-height: 15px;
+  color: #39628d;
+}
+thead tr {
+  border-bottom: 2px solid #e2e2e2;
+  border-top: 2px solid #e2e2e2;
+}
+
+.first-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.left-side {
+  display: flex;
+  margin-left: 150px;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 65px;
+}
+img {
+  padding: 0 8px;
+}
+
+input {
+  width: 16px;
+  height: 16px;
+  border: solid #dadada;
+}
