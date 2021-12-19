@@ -16,7 +16,14 @@ const RowComponent = ({ users, updatePublished, checkUser }) => {
             <input onClick={() => checkUser(user)} type="checkbox" />
           </td> */}
           <td>
-            <input onClick={() => checkUser(user)} type="checkbox" />
+            {user.selected ? (
+              <input onChange={() => checkUser(user)} type="checkbox" checked />
+            ) : (
+              <input onChange={() => checkUser(user)} type="checkbox" />
+            )}
+
+            
+            {/* <input onClick={() => checkUser(user)} type="checkbox" /> */}         
 
             <span
               className={
