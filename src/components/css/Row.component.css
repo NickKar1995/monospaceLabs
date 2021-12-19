@@ -1,5 +1,23 @@
 td {
-    font-family: "Montserrat-regular", sans-serif;
-    color: #39628d;
-    line-height: 18px;
-  }
+  font-family: "Montserrat-regular", sans-serif;
+  color: #39628d;
+  line-height: 18px;
+}
+
+td span {
+  width: 19px;
+  height: 15px;
+  padding: 2px;
+}
+
+.back-blue {
+  background-color: #8a98ca;
+}
+
+.back-gray {
+  background-color: #cacaca;
+}
+
+.back-orange {
+  background-color: #f2ac57;
+}

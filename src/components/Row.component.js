@@ -15,7 +15,21 @@ const RowComponent = ({ users, updatePublished, checkUser }) => {
           <td>
             <input onClick={() => checkUser(user)} type="checkbox" />
           </td>
-          <td>{`${user.username}`}</td>
+          <td>
+            <span
+              className={
+                user.type === "CO"
+                  ? "back-blue"
+                  : user.type === "SU"
+                  ? "back-gray"
+                  : user.type === "CR"
+                  ? "back-orange"
+                  : "null"
+              }
+            >{`${user.type}`}</span>
+          </td>
+
+          {/* <td>{`${user.username}`}</td> */}
           <td>{user.name}</td>
           <td>{user.email}</td>
           <td>{`${user.phone}`}</td>

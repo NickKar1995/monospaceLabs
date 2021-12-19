@@ -64,16 +64,18 @@ export default function UsersList() {
   };
 
   useEffect(() => {
-    // setUsers(usersData)
-    retrieveUsers();
+    setUsers(usersData);
+    // retrieveUsers();
   }, []);
 
   if (loading) return <p>Loading...</p>;
   return (
-    <div class="wrapper
+    <div
+      className="wrapper
     
     
-    ">
+    "
+    >
       <div className="first-bar">
         <div className="left-side">
           <img src="/images/Questionmark.svg" alt="question mark" />
